@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/6416f079ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO MY APP</h1>
+        <h3><span><i class="fas fa-user-circle fa-2x"></i></span> <span id="email-display"> LOYCE'S APP</span></h3>
+    </header>
+    <div class="homediv" id="homedv">
+    <form action="#" id="userform">
+        <input type="text" placeholder="Create a Username" id="username">
+        <input type="email" placeholder="Type your Email" id="email">
+        <input type="password" placeholder="Create password" id="password">
+        <input type="text" placeholder="Type your contact" id="contact">
+        <input type="text" placeholder="Your location" id="location">
+        <input type="file" accept="image/*" onchange="loadFile(event)" value="Upload photo">
+        <small id="error-msg">You can not submit an empty field!!!</small>
+        <button id="submitButton">submit</button>
+    </form>
+</div>
+<div class="resultdiv" id="resultdisplay">
+        <p><img id="user-img" src="" alt=""></p>
+    <ul id="user-output">
+        <!-- Iwant to append each element in user object  at the end of each word  -->
+        <li>Username: </li>
+        <li>Email: </li>
+        <li>Contact: </li>
+        <li>Location: </li>
+    </ul>
+    <button id="exit-btn">EXIT</button>
+    
+</div>
+</body>
+<script src="index.js"></script>
+</html>
