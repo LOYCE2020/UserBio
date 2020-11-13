@@ -21,20 +21,29 @@ submitButton.addEventListener('click', (e)=>{
         const locationInput=city.value;
         const errorMessage=document.getElementById('error-msg');
     if(usernameInput=="" ||emailInput=="" ||passwordInput==""|| contactInput=="" || locationInput==""){
-        errorMessage.style.visibility="visible"
-}else{
+         errorMessage.style.visibility="visible"
+    }
+    else{
         const newUser={
-            Username:usernameInput,
-            Email:emailInput,
-            Password:passwordInput,
-            Contact:contactInput,
-            Location:locationInput
+            username:usernameInput,
+            email:emailInput,
+            password:passwordInput,
+            contact:contactInput,
+            location:locationInput
         }
-        arr.push(newUser);
         homeDiv.style.display='none';
         resultDiv.classList.add('displayresults');
         emailDisplay.innerHTML=emailInput;   
         userform.reset();
+        const resultdv=document.getElementById('list-items')
+        const list= document.createElement('ul')
+        list.innerHTML=`<li style="margin-bottom=10px"> <b>Username:</b> ${newUser.username}</li>
+                        <li> <b>Email:</b> ${newUser.email}</li>
+                        <li> <b>Password:</b> ${newUser.password}</li>
+                        <li> <b>Contact:</b> ${newUser.contact}</li>
+                        <li> <b>Location:</b> ${newUser.location}</li>`
+        resultdv.appendChild(list)
+
     }
 
 })
